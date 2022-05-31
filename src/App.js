@@ -5,7 +5,7 @@ import Sidebar from './Sidebar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Mail from './Mail'
 import EmailList from './EmailList'
-
+import SendMail from './SendMail'
 function App() {
   return (
     <BrowserRouter>
@@ -14,10 +14,11 @@ function App() {
         <div className='app_body'>
           <Sidebar />
           <Routes>
-            <Route path='./Mail' element={<Mail />} />
+            <Route path='/Mail' element={<Mail />} />
             <Route path='/' element={<EmailList />} />
           </Routes>
         </div>
+        <SendMail />
       </div>
     </BrowserRouter>
   )
